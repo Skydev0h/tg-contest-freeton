@@ -1,0 +1,18 @@
+{
+  "constraints": {
+    "minTons": 5,
+    "maxTons": 10,
+    "minAccepted": 3,
+    "nanoTons": false,
+    "collectDeadline": 0,
+    "releaseLocktime": 0,
+    "releaseDeadline": 1
+  },
+  "flags": {
+    "autoRelease": true,
+    "continuousColl": false
+  },
+  "beneficiariesList": [],
+  "ultimateBeneficiary": "0:954688c088881241c5c6b248da398aefa2752bd5a97202f41454fdf3671e671c",
+  "controllerAddr": ""
+}

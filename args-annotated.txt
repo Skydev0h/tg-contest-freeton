@@ -1,0 +1,23 @@
+{
+  "constraints": {
+    "minTons": 0, // Minimum required amount of Tons to be able to release them
+    "maxTons": 0, // Maximum possible amount of Tons to be collected
+    "minAccepted": 0, // Minimum required amount of Tons in one transaction
+    "nanoTons": false, // true to specify values above in nanotons, false for tons
+    "collectDeadline": 0, // minTons shall be collected by this time
+    "releaseLocktime": 0, // Controller cannot release or reclaim before this time
+    "releaseDeadline": 0  // A decision would be carried out automatically after this time
+  }, // the numbers above shall be either unixtime or be minus offset in seconds from now
+  "flags": {
+    "autoRelease": false, // false to reclaim after release deadline or true to release
+    "continuousColl": false // allow collecting funds after collect deadline or not
+  },
+  "beneficiariesList": [
+    { // this element can occur multiple times
+      "addr": "0:0000000000000000000000000000000000000000000000000000000000000000",
+      "value": 0 // positive value for fixed amount of nanograms, negative for percentages
+    } // -1 to -100000000 is 1/100000000th of total sum, -100000001 to -200000000 for partial sum
+  ], // ultimate beneficiary would receive all remaining funds after beneficiaries above
+  "ultimateBeneficiary": "0:0000000000000000000000000000000000000000000000000000000000000000",
+  "controllerAddr": "" // address of controller who can decide to reclaim or release funds if
+} //                      conditions are met or empty for no controller

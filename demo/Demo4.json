@@ -1,0 +1,31 @@
+{
+  "constraints": {
+    "minTons": 10,
+    "maxTons": 20,
+    "minAccepted": 5,
+    "nanoTons": false,
+    "collectDeadline": 0,
+    "releaseLocktime": 0,
+    "releaseDeadline": 1
+  },
+  "flags": {
+    "autoRelease": true,
+    "continuousColl": false
+  },
+  "beneficiariesList": [
+    {
+      "addr": "0:08a2993aa5c9d938b68142858886783994fb822dc8f801f242d28dfb5d3a6ba3",
+      "value":  -25000000
+    },
+    {
+      "addr": "0:954688c088881241c5c6b248da398aefa2752bd5a97202f41454fdf3671e671c",
+      "value":  -20000000
+    },
+    {
+      "addr": "0:08a2993aa5c9d938b68142858886783994fb822dc8f801f242d28dfb5d3a6ba3",
+      "value": -125000000
+    }
+  ],
+  "ultimateBeneficiary": "0:08a2993aa5c9d938b68142858886783994fb822dc8f801f242d28dfb5d3a6ba3",
+  "controllerAddr": ""
+}

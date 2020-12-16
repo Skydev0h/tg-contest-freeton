@@ -1,0 +1,130 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"components":[{"name":"minTons","type":"uint64"},{"name":"maxTons","type":"uint64"},{"name":"minAccepted","type":"uint64"},{"name":"nanoTons","type":"bool"},{"name":"collectDeadline","type":"int40"},{"name":"releaseLocktime","type":"int40"},{"name":"releaseDeadline","type":"int40"}],"name":"constraints","type":"tuple"},
+				{"components":[{"name":"autoRelease","type":"bool"},{"name":"continuousColl","type":"bool"}],"name":"flags","type":"tuple"},
+				{"components":[{"name":"addr","type":"address"},{"name":"value","type":"int64"}],"name":"beneficiariesList","type":"tuple[]"},
+				{"name":"ultimateBeneficiary","type":"address"},
+				{"name":"controllerAddr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "Controller_ReleaseFunds",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "Controller_InitiateReclaim",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "ReserveMoreGas",
+			"inputs": [
+				{"name":"gasReserve","type":"uint64"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getInformation",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"minTons","type":"uint64"},{"name":"maxTons","type":"uint64"},{"name":"minAccepted","type":"uint64"},{"name":"nanoTons","type":"bool"},{"name":"collectDeadline","type":"int40"},{"name":"releaseLocktime","type":"int40"},{"name":"releaseDeadline","type":"int40"}],"name":"constraints","type":"tuple"},
+				{"components":[{"name":"autoRelease","type":"bool"},{"name":"continuousColl","type":"bool"}],"name":"flags","type":"tuple"},
+				{"name":"canReclaim","type":"bool"},
+				{"name":"destroyed","type":"bool"},
+				{"components":[{"name":"addr","type":"address"},{"name":"value","type":"int64"}],"name":"beneficiariesList","type":"tuple[]"},
+				{"name":"ultimateBeneficiary","type":"address"},
+				{"name":"investorsMap","type":"map(address,uint64)"},
+				{"name":"controller","type":"address"},
+				{"name":"controllerType","type":"uint8"}
+			]
+		},
+		{
+			"name": "getIsReclaiming",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"bool"}
+			]
+		},
+		{
+			"name": "getReclaimable",
+			"inputs": [
+				{"name":"addr","type":"address"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint64"}
+			]
+		},
+		{
+			"name": "getReleaseable",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"toBens","type":"map(address,uint128)"},
+				{"name":"toUltBen","type":"uint128"},
+				{"name":"invalid","type":"address[]"}
+			]
+		},
+		{
+			"name": "getReleaseableEmulated",
+			"inputs": [
+				{"name":"balance","type":"uint128"}
+			],
+			"outputs": [
+				{"name":"toBens","type":"map(address,uint128)"},
+				{"name":"toUltBen","type":"uint128"},
+				{"name":"invalid","type":"address[]"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+		{
+			"name": "FundsReleased",
+			"inputs": [
+				{"name":"balance","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "ReclaimStarted",
+			"inputs": [
+				{"name":"balance","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "FundsAutoReleased",
+			"inputs": [
+				{"name":"balance","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "ReclaimAutoStarted",
+			"inputs": [
+				{"name":"balance","type":"uint128"}
+			],
+			"outputs": [
+			]
+		}
+	]
+}

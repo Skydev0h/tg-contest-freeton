@@ -16,6 +16,8 @@ As of now to deploy the smart contract at the very least you require the [tonos-
 
 The deployment process is explained in more detail [at this dedicated page](deployment.md).
 
+Example configuration use-cases are provide [at this specific page](examples.md).
+
 If you want to be extra paranoid you may want to recompile the contract yourself, then you would need [TON Solidity compiler](https://github.com/tonlabs/TON-Solidity-Compiler) and [TVM Linker](https://github.com/tonlabs/TVM-linker) tools. You can learn more about writing and compiling smart contracts in [this official guide](https://docs.ton.dev/86757ecb2/p/950f8a-write-smart-contract-in-solidity). Some intricacies about setting up tooling and compiling contracts are outlined there.
 
 ## Usage and interaction
